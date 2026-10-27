@@ -1,0 +1,54 @@
+# ---------- Unity 自动生成目录（题目要求不上传） ----------
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# 运行时截图输出（证据图已挑选复制到 docs/screenshots/）
+/Captures/
+/Captures.meta
+
+# Unity / IDE 生成文件
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+.vs/
+.vscode/
+.idea/
+.consulo/
+
+# ---------- Go ----------
+/server/server
+/server/server.exe
+/server/server.log
+# 运行时数据文件：随机器状态变化，不入库（首次启动会自动创建）
+/server/data/problems.json
+/server/data/problems.json.tmp
+
+# ---------- Node / Vite ----------
+/web/node_modules/
+/web/dist/
+/web/.env
+/web/.env.local
+npm-debug.log*
+yarn-error.log*
+
+# ---------- 系统 ----------
+.DS_Store
+Thumbs.db
+desktop.ini
