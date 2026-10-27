@@ -3,6 +3,8 @@
 一个可运行的最小闭环：**Unity 现场巡检端** 点击设备放置问题标记并上报，**Go 后端** 落盘保存，**React 管理端** 查看并流转状态。
 
 > 说明：本工程按「无 AR 设备备选版」实现，运行在 Unity 编辑器的普通 3D 场景中，不含 AR Foundation 运行时。第 5 节的三个 AR 基础问题以文字回答，见本文第 6 节。
+>
+> 题目第 7 节的演示要求里出现的「真机」字样，是 AR 真机版遗留的表述。按第 1 节「本题不要求真实 AR，也不要求使用手机，Unity Editor 或普通桌面设备可以运行即可」，本交付的演示视频在编辑器/桌面中录制。
 
 ![Unity 巡检现场](docs/screenshots/01-unity-scene-5markers.png)
 
@@ -40,9 +42,11 @@ go run . -addr :9000 -data data/problems.json
 启动成功的日志：
 
 ```
-[BOOT] 数据文件 data/problems.json，已加载 5 条问题
+[BOOT] 数据文件 data/problems.json，已加载 N 条问题
 [BOOT] 服务已启动 http://127.0.0.1:8080
 ```
+
+> `N` 首次启动为 0：`server/data/problems.json` 不入库，服务起来后自动创建这个文件。
 
 自检：`curl http://127.0.0.1:8080/api/health` → `{"status":"ok","problemCount":5,...}`
 单元测试：`cd server && go test ./...`
@@ -256,7 +260,6 @@ InspectionDemo/
 ├─ web/                              React 管理端（Vite + TS）
 ├─ docs/
 │  ├─ 验收记录.md                    逐条验收结果与证据
-│  ├─ 代码讲解.md                    逐文件讲解（面试用）
 │  ├─ 演示视频分镜.md                两段视频的拍摄脚本
 │  └─ screenshots/                   截图证据
 ├─ AI_LOG.md                         AI 使用记录
