@@ -253,8 +253,7 @@ InspectionDemo/
 │  ├─ Editor/                        编辑器工具（不参与打包）
 │  │  ├─ SceneBuilder.cs             一键生成场景 + UI 并绑定引用
 │  │  ├─ RuntimeSelfTest.cs          23 项运行时断言
-│  │  ├─ ScreenshotUtil.cs           含 UI 的截图工具
-│  │  └─ AutoStartMCPBridge.cs       MCP for Unity 桥接自启（开发辅助）
+│  │  └─ ScreenshotUtil.cs           含 UI 的截图工具
 │  └─ Fonts/SimHei.ttf
 ├─ server/                           Go 后端（model / store / handlers / main + 测试）
 ├─ web/                              React 管理端（Vite + TS）
