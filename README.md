@@ -28,10 +28,21 @@
 
 ### 2.1 Go 后端（先启动，另外两端都依赖它）
 
+方式一：用源码编译运行（Go 1.21 及以上）
+
 ```bash
 cd server
 go run .          # 或先 go build -o server.exe . 再 ./server.exe
 ```
+
+方式二：直接运行预编译程序（Windows x64，无需安装 Go）
+
+```bash
+cd server
+.\server.exe
+```
+
+压缩包内已附带 `server/server.exe`（由上述源码编译）。该文件不进 Git 仓库，仅随压缩包分发；如需在其他平台运行，用方式一重新编译即可。
 
 默认监听 `:8080`，数据落到 `server/data/problems.json`。可选参数：
 
@@ -46,9 +57,9 @@ go run . -addr :9000 -data data/problems.json
 [BOOT] 服务已启动 http://127.0.0.1:8080
 ```
 
-> `N` 首次启动为 0：`server/data/problems.json` 不入库，服务起来后自动创建这个文件。
+> `N` 首次启动为 0：`server/data/problems.json` 不入库，首次提交时自动创建（目录一并创建）。
 
-自检：`curl http://127.0.0.1:8080/api/health` → `{"status":"ok","problemCount":5,...}`
+自检：`curl http://127.0.0.1:8080/api/health` → `{"status":"ok","problemCount":0,...}`（`problemCount` 为当前记录数，首次启动是 0）
 单元测试：`cd server && go test ./...`
 
 ### 2.2 React 管理端
