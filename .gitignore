@@ -8,6 +8,8 @@
 /[Uu]ser[Ss]ettings/
 /[Mm]emoryCaptures/
 /[Rr]ecordings/
+/[Aa]ssets/_Recovery/
+/[Aa]ssets/_Recovery.meta
 
 # 运行时截图输出（证据图已挑选复制到 docs/screenshots/）
 /Captures/
@@ -45,6 +47,7 @@
 /web/dist/
 /web/.env
 /web/.env.local
+/web/vite.log
 npm-debug.log*
 yarn-error.log*
 
